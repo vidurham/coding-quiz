@@ -5,6 +5,8 @@ var quizEl = document.querySelector("#quiz");
 var questionEl = document.querySelector(".question");
 var answersEl = document.querySelector(".answers");
 var commentEl = document.querySelector(".comment");
+var scoreEl = document.querySelector("#score")
+var userScoreEl = document.querySelector(".user-score")
 var secondsLeft = 75;
 var questionNumber = -1;
 
@@ -35,6 +37,7 @@ function setTimer () {
 
         if (secondsLeft === 0 || questionNumber === questions.length){
             clearInterval(count);
+            setTimeout(displayScore, 500)
 
         }
     }, 1000);
@@ -65,6 +68,12 @@ var nextQuestion = function (event) {
     }
 
     makeQuiz();
+}
+
+function displayScore() {
+    quizEl.classList.add("gone")
+    scoreEl.classList.remove("gone")
+    userScoreEl.textContent = "Final Score: " + secondsLeft;
 }
 
 startBtn.addEventListener("click", startTimer);

@@ -9,53 +9,30 @@
 </head>
 <body>
     <header>
-        <h2>View High Scores</h2>
+        <h2 class="high-score">View High Scores</h2>
         <div class="timer">
             <div id="seconds">Time Left: 0</div>
         </div>
     </header>
     <!--Home Screen-->
-    <div id="home">
-        <div class="start-btn">
-                <button>Start Quiz</button>
-        </div> 
-        <div class="info-box gone">
-            <div class="info-title">
-                <span>Some Rules of this Quiz</span>
-            </div>
-            <div class="info-list">
-                <div class="info">You have a total of 75 seconds to complete the quiz</div>
-                <div class="info">You get one guess on each question</div>
-                <div class="info">If you guess correctly, you move on to the next question</div>
-                <div class="info">If you guess wrong, you lose 10 seconds and move on to the next question</div>
-                <div class="info">You're score will be based on the amount of time left at the end of the quiz</div>
-            </div>
-            <div class="buttons">
-                <button class="quit">Exit Quiz</button>
-                <button class="restart">Start Quiz</button>
-            </div>
-        </div>
+    <div class="home" id="home">
+        <button id="button">Start Quiz</button> 
+        <h1>Rules of the Quiz</h1>         
+        <p>You have a total of 75 seconds to complete the quiz</p>
+        <p>You get one guess on each question</p>
+        <p>If you guess correctly, you move on to the next question</p>
+        <p>If you guess wrong, you lose 10 seconds and move on to the next question</p>
+        <p>You're score will be based on the amount of time left at the end of the quiz</p>
     </div>
     <!--Questions-->
-    <div class="gone" id="quiz">
+    <div class="quiz gone" id="quiz">
         <section>
             <div class="question">
                 <h2>Question</h2>
             </div>
             <div class="answers">
-                <div class="option">
-                    <span>A)</span>
-                </div>
-                <div class="option">
-                    <span>B)</span>
-                </div>
-                <div class="option">
-                    <span>C)</span>
-                </div>
-                <div class="option">
-                    <span>D)</span>
-                </div>
             </div>
+            <p class="comment"></p>
         </section>
     </div>
     <!--Results-->

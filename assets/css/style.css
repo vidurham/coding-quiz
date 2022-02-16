@@ -8,11 +8,16 @@ header {
 }
 
 .high-score {
+    display: flex;
+    align-items: stretch;
     font-size: 25px;
     font-weight: bold;
-    background-color: black;
     color: white;
-    padding: 20px;
+    padding: 30px;
+}
+
+.hs-container{
+    background-color: black;
 }
 
 .timer {
@@ -23,7 +28,7 @@ header {
     font-weight: bold;
     background-color: black;
     color: white;
-    padding: 20px;
+    padding: 45px;
 }
 
 .home {
@@ -50,15 +55,6 @@ header {
     cursor: pointer;
 }
 
-.quiz-box {
-    width: 550px;
-}
-
-.option-list {
-    padding: 15px 0px;
-    display: flex;
-}
-
 .answers {
     display: flex;
     flex-wrap: wrap;
@@ -70,10 +66,10 @@ header {
     border: 3px solid white;
     border-radius: 5px;
     width: 200px;
-    height: 80px;
+    height: 100px;
     flex: 1 1 100%;
     font-size: 30px;
-    margin: 10px 0;
+    margin: 15px 0;
 }
 
 .quiz {
@@ -85,6 +81,15 @@ header {
     display: flex;
     justify-content: center;
     font-size: 65px;
+    margin-bottom: 60px;
+}
+
+.comment {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    border-top: 2px solid black;
+    font-size: 80px;
 }
 
 .gone {

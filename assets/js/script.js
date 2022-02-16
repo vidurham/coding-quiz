@@ -59,12 +59,25 @@ function makeQuiz () {
     }
 }
 
+function hideComment() {
+    commentEl.style.display = "none";
+}
+
+function showComment() {
+    commentEl.removeAttribute("style");
+}
+
 var nextQuestion = function (event) {
     if (answer === event.target.textContent) {
         commentEl.innerHTML = "Correct!!";
+        setTimeout(hideComment,1225);
+        showComment();
     }
     else {
-        commentEl.innerHTML = "Wrong!!"
+        commentEl.innerHTML = "Wrong!!";
+        setTimeout(hideComment,1225);
+        secondsLeft = secondsLeft - 20;
+        showComment();
     }
 
     makeQuiz();

@@ -1,5 +1,38 @@
+body {
+    background: red
+}
+
+.start-button, .quiz-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: black;
+    color: white;
+    border-radius: 5px;
+}
+
 .start-button button {
     font-size: 25px;
     padding: 20px 35px;
-    cursor: pointer
+    cursor: pointer;
+}
+
+.quiz-box {
+    width: 550px;
+}
+
+.option-list {
+    padding: 15px 0px;
+    display: block;
+}
+
+.option {
+    background: lightcoral;
+    border: 1px solid white;
+    border-radius: 5px;
+
+}
+
+.gone {
+    display: none;
 }

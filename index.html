@@ -10,27 +10,56 @@
 <body>
     <header>
         <h2>View High Scores</h2>
-        <h2>Time</h2>
+        <div class="timer">
+            <div class="timer-text">Time Left</div>
+            <div id="seconds">75</div>
+        </div>
     </header>
-    <div class="start-button">
-            <button>Start Quiz</button>
-    </div> 
-    <div class="info-box">
-        <div class="info-title">
-            <span>Some Rules of this Quiz</span>
-        </div>
-        <div class="info-list">
-            <div class="info">You have a total of 75 seconds to complete the quiz</div>
-            <div class="info">You get one guess on each question</div>
-            <div class="info">If you guess correctly, you move on to the next question</div>
-            <div class="info">If you guess wrong, you lose 10 seconds and move on to the next question</div>
-            <div class="info">You're score will be based on the amount of time left at the end of the quiz</div>
-        </div>
-        <div class="buttons">
-            <button class="quit">Exit Quiz</button>
-            <button class="restart">Start Quiz</button>
+    <!--Home Screen-->
+    <div id="home">
+        <div class="start-btn">
+                <button>Start Quiz</button>
+        </div> 
+        <div class="info-box gone">
+            <div class="info-title">
+                <span>Some Rules of this Quiz</span>
+            </div>
+            <div class="info-list">
+                <div class="info">You have a total of 75 seconds to complete the quiz</div>
+                <div class="info">You get one guess on each question</div>
+                <div class="info">If you guess correctly, you move on to the next question</div>
+                <div class="info">If you guess wrong, you lose 10 seconds and move on to the next question</div>
+                <div class="info">You're score will be based on the amount of time left at the end of the quiz</div>
+            </div>
+            <div class="buttons">
+                <button class="quit">Exit Quiz</button>
+                <button class="restart">Start Quiz</button>
+            </div>
         </div>
     </div>
+    <!--Questions-->
+    <div class="gone" id="quiz">
+        <section>
+            <div class="question">
+                <h2>What is my name?</h2>
+            </div>
+            <div class="option-list">
+                <div class="option">
+                    <span>Vincent</span>
+                </div>
+                <div class="option">
+                    <span>Richard</span>
+                </div>
+                <div class="option">
+                    <span>William</span>
+                </div>
+                <div class="option">
+                    <span>Simba</span>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!--Results-->
     <script src="./assets/js/script.js"></script>
 </body>
 </html>

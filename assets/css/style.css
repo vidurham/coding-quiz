@@ -2,7 +2,7 @@ body {
     background: red
 }
 
-.start-button, .quiz-box {
+.start-btn, .quiz-box {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -11,7 +11,7 @@ body {
     border-radius: 5px;
 }
 
-.start-button button {
+.start-btn button {
     font-size: 25px;
     padding: 20px 35px;
     cursor: pointer;

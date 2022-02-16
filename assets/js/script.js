@@ -12,14 +12,21 @@ var questionNumber = -1;
 
 
 var questions = [
-    {question: "What is my Name?",
-    answer : "Vincent",
-    options : ["Richard", "Vincent", "Doug", "Bo"]},
+    {question: "What is my favorite animal?",
+    answer : "Piggy",
+    options : ["Crocodile", "Piggy", "Doggy", "Dolphin"]},
+    
+    {question: "What is my favorite bar in Charlotte?",
+    answer: "Gin Mill",
+    options: ["Brickyard", "Slate", "Tavern on the Tracks", "Gin Mill"]},
+    
+    {question: "What could I really go for right now?",
+    answer: "A run",
+    options: ["Ice Cream", "Water", "Tacos", "A run"]},
 
-    {question: "What do I do?",
-    answer : "Fly Drones",
-    options : ["Fly Drones", "Eat", "Pray", "Love"]
-}
+    {question: "What are you waiting for?",
+    answer: "Something amazing, I guess",
+    options: ["Something amazing, I guess", "The world to change", "The Weekend", "Death"]},
 ]
 
 var startTimer = function () {

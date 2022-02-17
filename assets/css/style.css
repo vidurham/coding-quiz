@@ -124,10 +124,11 @@ header {
     display: none;
 }
 
-@media screen and (max-width: 890px) {
+@media screen and (max-width: 950px) {
     .option {
         width: 150px;
         height: 100px;
         margin: 7px 7px;
+        font-size: 4.2vw;
     }
 }

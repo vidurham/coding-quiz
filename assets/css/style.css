@@ -11,7 +11,7 @@ header {
 .high-score {
     display: flex;
     align-items: center;
-    font-size: 30px;
+    font-size: 2.80vw;
     font-weight: bold;
     color: white;
     padding: 15px;
@@ -28,7 +28,7 @@ header {
 }
 
 .title-page {
-    font-size: 50px;
+    font-size: 4.75vw;
     color: white;
     padding: 15px
 }
@@ -37,7 +37,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 25px;
+    font-size: 2.80vw;
     font-weight: bold;
     background-color: black;
     color: white;
@@ -94,8 +94,8 @@ header {
 .question {
     display: flex;
     justify-content: center;
-    font-size: 65px;
-    margin-bottom: 60px;
+    font-size: 7vw;
+    margin-bottom: 20px;
 }
 
 .comment {
@@ -122,4 +122,11 @@ header {
 
 .gone {
     display: none;
+}
+
+@media screen and (max-width: 890px) {
+    .option {
+        width: 150px;
+        height: 100px;
+    }
 }

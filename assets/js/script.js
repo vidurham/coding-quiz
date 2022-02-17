@@ -12,21 +12,25 @@ var questionNumber = -1;
 
 
 var questions = [
-    {question: "What is my favorite animal?",
-    answer : "Piggy",
-    options : ["Crocodile", "Piggy", "Doggy", "Dolphin"]},
+    {question: "Who is the Yark Shark?",
+    answer : "Nick",
+    options : ["Joe", "Nick", "Vince", "Mitch"]},
     
-    {question: "What is my favorite bar in Charlotte?",
-    answer: "Gin Mill",
-    options: ["Brickyard", "Slate", "Tavern on the Tracks", "Gin Mill"]},
+    {question: "Who sprained their ankle jumping in a 4-foot pool?",
+    answer: "Jess",
+    options: ["Mom", "Kelly", "Eva", "Jess"]},
     
-    {question: "What could I really go for right now?",
-    answer: "A run",
-    options: ["Ice Cream", "Water", "Tacos", "A run"]},
+    {question: "Who was almost raped by a pizza man in Winston-Salem?",
+    answer: "Vince",
+    options: ["Bailey", "Dad", "Vince", "Michael Neel"]},
 
-    {question: "What are you waiting for?",
-    answer: "Something amazing, I guess",
-    options: ["Something amazing, I guess", "The world to change", "The Weekend", "Death"]},
+    {question: "What smelled the worst on every vacation?",
+    answer: "Nick's Taint",
+    options: ["Nick's Taint", "Nick's feet", "Nick's socks", "The bathroom after Joe has a turkey leg"]},
+
+    {question: "Who is excited for Disney",
+    answer: "All the Above",
+    options: ["The whole famdamily", "The new dog", "Walter Disney himself", "All the Above"]},
 ]
 
 var startTimer = function () {
@@ -83,7 +87,7 @@ var nextQuestion = function (event) {
     else {
         commentEl.innerHTML = "Wrong!!";
         setTimeout(hideComment,1225);
-        secondsLeft = secondsLeft - 20;
+        secondsLeft = secondsLeft - 10;
         showComment();
     }
 

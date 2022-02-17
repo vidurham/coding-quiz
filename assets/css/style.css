@@ -128,5 +128,6 @@ header {
     .option {
         width: 150px;
         height: 100px;
+        margin: 7px 7px;
     }
 }

@@ -20,10 +20,6 @@ var questions = [
     answer: "Jess",
     options: ["Mom", "Kelly", "Eva", "Jess"]},
     
-    {question: "Who was almost raped by a pizza man in Winston-Salem?",
-    answer: "Vince",
-    options: ["Bailey", "Dad", "Vince", "Michael Neel"]},
-
     {question: "What smelled the worst on every vacation?",
     answer: "Nick's Taint",
     options: ["Nick's Taint", "Nick's feet", "Nick's socks", "The bathroom after Joe has a turkey leg"]},

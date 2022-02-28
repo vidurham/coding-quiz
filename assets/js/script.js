@@ -5,29 +5,43 @@ var quizEl = document.querySelector("#quiz");
 var questionEl = document.querySelector(".question");
 var answersEl = document.querySelector(".answers");
 var commentEl = document.querySelector(".comment");
-var scoreEl = document.querySelector("#score")
-var userScoreEl = document.querySelector(".user-score")
+var scoreEl = document.querySelector("#score");
+var userScoreEl = document.querySelector(".user-score");
+var resetBtn = document.querySelector("#reset");
+var saveBtn = document.querySelector("#savescore");
+var userName = document.querySelector("#username")
 var secondsLeft = 75;
 var questionNumber = -1;
 
 
-var questions = [
-    {question: "Who is the Yark Shark?",
-    answer : "Nick",
-    options : ["Joe", "Nick", "Vince", "Mitch"]},
-    
-    {question: "Who sprained their ankle jumping in a 4-foot pool?",
-    answer: "Jess",
-    options: ["Mom", "Kelly", "Eva", "Jess"]},
-    
-    {question: "What smelled the worst on every vacation?",
-    answer: "Nick's Taint",
-    options: ["Nick's Taint", "Nick's feet", "Nick's socks", "The bathroom after Joe has a turkey leg"]},
 
-    {question: "Who is excited for Disney",
-    answer: "All the Above",
-    options: ["The whole famdamily", "The new dog", "Walter Disney himself", "All the Above"]},
+
+var questions = [
+    {question: "What Disney movie takes place in the fictional San Fransokyo?",
+    answer : "Big Hero 6",
+    options : ["Peter Pan", "Big Hero 6", "Fantasia", "Toy Story"]},
+    
+    {question: "In Disney's Frozen, the name of the reindeer is?",
+    answer: "Sven",
+    options: ["Sven", "George", "Elsa", "Iago"]},
+    
+    {question: "Who wrote the soundtrack to Tarzan?",
+    answer: "Phil Collins",
+    options: ["Walt Disney", "Ludwig van Beethoven", "Kanye West", "Phil Collins"]},
+
+    {question: "What is the name of the main rat in Ratatouille?",
+    answer: "Remy",
+    options: ["Gusteau", "Joc", "Remy", "Alfredo"]},
+
+    {question: "Finish the Line: 'Ride like the wind, ________' (Toy Story 2)" ,
+    answer: "Bullseye",
+    options: ["Lightyear", "Gunslinger", "Cowboy", "Bullseye"]},
 ]
+
+var restartQuiz = function() {
+    scoreEl.classList.add("gone")
+    homeEl.classList.remove("gone")
+}
 
 var startTimer = function () {
     homeEl.classList.add("gone");
@@ -96,7 +110,30 @@ function displayScore() {
     userScoreEl.textContent = "Final Score: " + secondsLeft;
 }
 
+function submitHighScore() {
+    var name = userName.value
+    if (name === null) {
+        alert("No intials entered")
+    }
+    else {
+        var finalScore = {
+            initials: name,
+            score: secondsLeft,
+        }
+        var highScoresList = localStorage.getItem("highScoresList");
+        if (highScoresList === null) {
+            highScoresList = [];
+        }
+        else {
+            highScoresList = JSON.parse(highScoresList);
+        }
+        highScoresList.push(finalScore);
+        var newScore = JSON.stringify(highScoresList);
+        localStorage.setItem("highScoresList", newScore)
+    }
+}
+
 startBtn.addEventListener("click", startTimer);
-
-
-answersEl.addEventListener("click", nextQuestion)
+resetBtn.addEventListener("click", restartQuiz);
+saveBtn.addEventListener("click", submitHighScore)
+answersEl.addEventListener("click", nextQuestion);

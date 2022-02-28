@@ -10,10 +10,10 @@
 <body>
     <header>
         <div class="hs-container">
-            <h1 class="high-score">View High Scores</h1>
+            <a href="#high-scores"><h1 class="high-score">View High Scores</h1></a>
         </div>
         <div class="title">
-            <h1 class="title-page">Durham Vacation Quiz</h1>
+            <h1 class="title-page">Disney Quiz</h1>
         </div>
         <div class="timer">
             <div id="seconds">Time Left: 0</div>
@@ -33,7 +33,7 @@
     <div class="quiz gone" id="quiz">
         <section>
             <div class="question">
-                <h2>Question</h2>
+                <h2></h2>
             </div>
             <div class="answers">
             </div>
@@ -47,8 +47,9 @@
                 <h1>Finished!</h1>
                 <p class="user-score"></p>
                 <label for="new-score">Enter Your Initials</label>
-                <input type="text" id="userName">
-                <button type="button">Add High Score</button>
+                <input type="text" id="username">
+                <button type="button" id="savescore">Add High Score</button>
+                <button type="button" id="reset">Start Quiz Again</button>
             </form>
         </div>
     </div>

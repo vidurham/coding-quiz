@@ -4,4 +4,4 @@ A quiz designed using simple HTML, CSS, and Javascript methods. This quiz is Dis
 
 Link: https://vidurham.github.io/coding-quiz/
 
-Screenshot:
+Screenshot of Site: ![Screenshot of Quiz website](/assets/images/screenshot.JPG)
